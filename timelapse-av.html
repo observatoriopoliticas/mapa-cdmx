@@ -399,7 +399,7 @@
         let playSpeed = 350;
 
         const map = L.map('map', { center: [19.38, -99.13], zoom: 11, zoomControl: false });
-        L.control.zoom({ position: 'topright' }).addTo(map);
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
         
         // Bloquear que los clics en la barra flotante hagan Zoom en el mapa
         L.DomEvent.disableClickPropagation(document.getElementById('timeline-ui'));
