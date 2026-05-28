@@ -181,7 +181,7 @@
                     Volver al Mapa
                 </button>
 
-                <img src="https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="header-logo theme-logo" alt="Logo Observatorio UACM">
+                <img src="https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="header-logo theme-logo" alt="Logo Observatorio UACM">
                 <h1>TIMELAPSE:<br/> CIERRE DE ESPACIOS</h1>
                 <h2>Desde 1998 - 2021</h2>
                 
@@ -273,7 +273,7 @@
     <footer id="app-footer">
         <div class="footer-logo">
             <p align="center" style="margin: 0;">
-                <img src="https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="theme-logo" alt="Logo Observatorio UACM">
+                <img src="https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="theme-logo" alt="Logo Observatorio UACM">
             </p>
         </div>
         <div class="footer-actions">
@@ -283,7 +283,7 @@
             <button class="footer-btn icon-only" title="Compartir en Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href), '_blank')">
                 <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
             </button>
-            <a href="https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/data/av-data-cdmx-20230122.geojson" target="_blank" download="av-data-cdmx.geojson" class="footer-btn dl-btn">
+            <a href="https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/data/av-data-cdmx-20230122.geojson" target="_blank" download="av-data-cdmx.geojson" class="footer-btn dl-btn">
                 <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 <span class="btn-text">Descargar GeoJSON</span>
             </a>
@@ -337,8 +337,8 @@
             const body = document.body;
             const btn = document.getElementById('theme-btn');
             const themeLogos = document.querySelectorAll('.theme-logo');
-            const darkLogoUrl = 'https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm-inv.svg';
-            const lightLogoUrl = 'https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg';
+            const darkLogoUrl = 'https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm-inv.svg';
+            const lightLogoUrl = 'https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg';
             
             if (body.getAttribute('data-theme') === 'light') {
                 body.setAttribute('data-theme', 'dark'); map.removeLayer(lightTiles); darkTiles.addTo(map);
@@ -353,7 +353,7 @@
         function openExcludedModal() { document.getElementById('excluded-modal').classList.add('active'); }
         function closeExcludedModal(e) { if(e && e.target !== e.currentTarget) return; document.getElementById('excluded-modal').classList.remove('active'); }
 
-        fetch('https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/cdmx-alcaldias.geojson')
+        fetch('https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/cdmx-alcaldias.geojson')
             .then(res => res.json())
             .then(data => {
                 L.geoJSON(data, {
@@ -363,7 +363,7 @@
                 }).addTo(map);
             });
 
-        fetch('https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/data/av-data-cdmx-20230122.geojson')
+        fetch('https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/data/av-data-cdmx-20230122.geojson')
             .then(res => res.json())
             .then(data => {
                 let perdidosArr = [];
