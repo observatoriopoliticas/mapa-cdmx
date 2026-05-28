@@ -167,7 +167,7 @@
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>                    
                     Volver al Mapa                
                 </button>
-                <img src="https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="header-logo theme-logo" alt="Logo Observatorio UACM">                
+                <img src="https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="header-logo theme-logo" alt="Logo Observatorio UACM">                
                 <h1>CINECLUBES CDMX</h1>                
                 <h2>Características Generales</h2>                                
                 <div class="counter-section">                    
@@ -224,7 +224,7 @@
     <footer id="app-footer">        
         <div class="footer-logo">            
             <p align="center" style="margin: 0;">                
-                <img src="https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="theme-logo" alt="Logo Observatorio UACM">            
+                <img src="https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg" class="theme-logo" alt="Logo Observatorio UACM">            
             </p>        </div>        
         <div class="footer-actions">            
             <button class="footer-btn icon-only" title="Compartir en X" onclick="window.open('https://twitter.com/intent/tweet?text=Descubre las características de los Cineclubes en la CDMX&url='+encodeURIComponent(window.location.href), '_blank')">                
@@ -233,7 +233,7 @@
             <button class="footer-btn icon-only" title="Compartir en Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href), '_blank')">                
                 <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>            
             </button>            
-            <a href="https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/data/Caract%20060125.geojson" target="_blank" download="cc-caracteristicas.geojson" class="footer-btn dl-btn">                
+            <a href="https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/data/Caract%20060125.geojson" target="_blank" download="cc-caracteristicas.geojson" class="footer-btn dl-btn">                
                 <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>                
                 <span class="btn-text">Descargar GeoJSON</span>            
             </a>        
@@ -283,8 +283,8 @@
             const body = document.body;
             const btn = document.getElementById('theme-btn');
             const themeLogos = document.querySelectorAll('.theme-logo');
-            const darkLogoUrl = 'https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm-inv.svg';
-            const lightLogoUrl = 'https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg';
+            const darkLogoUrl = 'https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm-inv.svg';
+            const lightLogoUrl = 'https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/misc/logo-opc-uacm.svg';
             
             if (body.getAttribute('data-theme') === 'light') {
                 body.setAttribute('data-theme', 'dark'); map.removeLayer(lightTiles); darkTiles.addTo(map);
@@ -312,7 +312,7 @@
             return "Sin información";
         }
 
-        fetch('https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/cdmx-alcaldias.geojson')
+        fetch('https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/cdmx-alcaldias.geojson')
             .then(res => res.json())
             .then(data => {
                 L.geoJSON(data, {
@@ -322,7 +322,7 @@
                 }).addTo(map);
             });
 
-        fetch('https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/refs/heads/main/data/cc-caracteristicas.geojson')
+        fetch('https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/refs/heads/main/data/cc-caracteristicas.geojson')
             .then(res => res.json())
             .then(data => {
                 let perdidosArr = [];
