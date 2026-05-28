@@ -76,8 +76,8 @@
         const svg = d3.select("#map-svg");
         const w = window.innerWidth * 0.85, h = window.innerHeight * 0.8;
 
-        const geoUrl = "https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/main/cdmx-alcaldias.geojson";
-        const avUrl = "https://raw.githubusercontent.com/JorgeCocompech/mapa-cdmx/main/data/av-data-cdmx-20230122.geojson";
+        const geoUrl = "https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/main/cdmx-alcaldias.geojson";
+        const avUrl = "https://raw.githubusercontent.com/observatoriopoliticas/mapa-cdmx/main/data/av-data-cdmx-20230122.geojson";
 
         Promise.all([d3.json(geoUrl), d3.json(avUrl)]).then(([geoData, avData]) => {
             
